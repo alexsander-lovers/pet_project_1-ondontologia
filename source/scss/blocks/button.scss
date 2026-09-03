@@ -22,10 +22,12 @@
 
   &-another {
     @include mobile {
-      display: none;
+      justify-self: center;
+      align-self: center;
       padding: rem(15) rem(24);
       color: var(--color-grey);
       border-color: var(--color-grey);
+      font-size: 13px;
     }
   }
 }

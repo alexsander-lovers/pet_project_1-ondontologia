@@ -21,10 +21,7 @@
     width: 100%;
     height: rem(3);
     background-color: var(--color-button-text);
-  }
-
-  &__line:first-child {
-
+    transition-duration: var(--transition-duration);
   }
 
   &__line:nth-child(2) {
@@ -32,7 +29,28 @@
   }
 
   &__line:last-child {
+
     width: 70%;
   }
 
+  &--is-active {
+    .burger-menu__line{
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        top: rem(-12);
+        width: 100%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
+
