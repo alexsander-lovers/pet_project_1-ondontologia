@@ -1,0 +1,27 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #FFF9FD;
+  --color-dark: #000000;
+  --color-dark-15: #252525;
+  --color-button-text: #00296D;
+  --color-button-bg: #44C6E9;
+  --color-section-bg: #D4E4F4;
+  --color-grey: #666666;
+  --color-accent-reverse: #D9D9D9;
+  --color-accent: #2977D5;
+
+  --font-family-base: "Source Sans 3", sans-serif;
+  --font-family-title: "Poppins", sans-serif;
+  --font-family-accent: "Open Sans", sans-serif;
+  --font-family-accent-small: "Lato", sans-serif;
+
+  --container-width: #{rem(1550)};
+  --container-padding-x: #{rem(90)};
+
+  @include mobile {
+   --container-padding-x: #{rem(20)};
+  }
+
+  --transition-duration: 0.2s;
+}

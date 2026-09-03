@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.logo {
+  flex-shrink: 0;
+
+  @include mobile {
+    &__images {
+      width: 30px;
+    }
+  }
+}

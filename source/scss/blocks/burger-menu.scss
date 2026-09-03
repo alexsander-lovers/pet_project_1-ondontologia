@@ -1,0 +1,38 @@
+@use 'helpers' as *;
+@use '../variables';
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  column-gap: rem(3);
+  width: rem(25);
+  height: rem(15);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @include mobile {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  &__line {
+    width: 100%;
+    height: rem(3);
+    background-color: var(--color-button-text);
+  }
+
+  &__line:first-child {
+
+  }
+
+  &__line:nth-child(2) {
+    width: 50%;
+  }
+
+  &__line:last-child {
+    width: 70%;
+  }
+
+}

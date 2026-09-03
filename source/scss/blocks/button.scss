@@ -1,0 +1,31 @@
+@use '../helpers' as *;
+@use '../variables';
+
+.button {
+  @include fluid-text(18, 14);
+
+  padding: rem(19) rem(37);
+  font-family: var(--font-family-title);
+  font-weight: 300;
+  color: var(--color-button-text);
+  background-color: transparent;
+  border: none;
+  border: rem(1) solid var(--color-button-text);
+  border-radius: rem(15);
+  white-space: nowrap;
+  transition-property: background-color;
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    background-color: var(--color-accent-reverse);
+  }
+
+  &-another {
+    @include mobile {
+      display: none;
+      padding: rem(15) rem(24);
+      color: var(--color-grey);
+      border-color: var(--color-grey);
+    }
+  }
+}

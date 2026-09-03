@@ -1,0 +1,121 @@
+@use '../helpers' as *;
+@use '../variables';
+
+.header {
+  position: sticky;
+  top: 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: rem(20);
+
+    @include mobile {
+      justify-content: space-between;
+      padding-block: rem(27);
+    }
+  }
+
+  &__wrapper-logo {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__inner-text {
+    text-align: center;
+  }
+
+  &__text {
+    @include fluid-text(24, 15);
+    font-family: var(--font-family-accent);
+    font-weight: 600;
+    color: var(--color-dark);
+
+    @include mobile {
+      font-family: var(--font-family-title);
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--color-dark-15);
+    }
+  }
+  &__subtext {
+    @include fluid-text(16, 12);
+    font-weight: 400;
+
+    @include mobile {
+      font-family: var(--font-family-accent-small);
+      color: var(--color-dark);
+      font-weight: 300;
+    }
+  }
+
+  &__mobile-continer {
+    display: contents;
+
+    @include mobile {
+      display: none;
+
+      &--is-active {
+        display: block;
+      }
+    }
+  }
+
+  .header__mobile-icon-wrapper {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    column-gap: rem(60);
+    row-gap: rem(2);
+    flex-wrap: wrap;
+
+    @include tablet {
+      column-gap: rem(10)
+    }
+
+    @include mobile {
+      display: none;
+      flex-direction: column;
+      row-gap: rem(60);
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+  }
+
+  &__link {
+    position: relative;
+    font-family: var(--font-family-title);
+    font-weight: 300;
+    color: var(--color-dark);
+    text-transform: capitalize;
+    text-decoration: none;
+
+    &--is-active {
+      border-bottom: rem(1) solid var(--color-accent);
+
+      @include mobile {
+        border-color: var(--color-accent);
+      }
+    }
+
+    @include hover {
+      text-decoration: underline;
+      text-decoration-color: var(--color-grey);
+      text-underline-offset: rem(4);
+    }
+
+    @include mobile {
+      color: var(--color-accent);
+    }
+  }
+}
