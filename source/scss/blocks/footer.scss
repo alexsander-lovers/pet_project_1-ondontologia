@@ -1,0 +1,151 @@
+@use 'helpers' as *;
+
+.footer {
+  background: linear-gradient(180deg, var(--color-accent-gradient-0) 0%, var(--color-accent-gradient-100) 100%);
+
+  &__container {
+    padding-block: rem(80);
+
+    @include mobile {
+      padding-inline: 0;
+      padding-block: 60;
+    }
+  }
+
+  &__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: rem(80);
+
+    @include mobile {
+      padding-inline: rem(20);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__text {
+    @include fluid-text(20, 13);
+
+    color: var(--color-button-bg);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: rem(160);
+    column-gap: rem(250);
+
+    @include tablet {
+      column-gap: rem(50)
+    }
+
+     @include mobile {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(80);
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(60);
+
+
+    @include mobile {
+      margin-inline: auto;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: rem(1);
+        background-color: var(--color-accent-reverse);
+        bottom: -30px;
+      }
+    }
+  }
+
+  &__item-wrapper {
+    display: flex;
+    column-gap: rem(20);
+  }
+
+  &__subtext-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+  }
+
+  &__subtext {
+    @include fluid-text(28, 20);
+
+    font-family: var(--font-family-title);
+    font-weight: 400;
+    color: var(--color-dark-15);
+  }
+
+  &__link {
+    @include fluid-text(22, 13);
+    color: var(--color-dark-40);
+
+    @include hover {
+      color: var(--color-light);
+    }
+  }
+
+  &__address-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include mobile {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__social-icon {
+    color: var(--color-light);
+
+    @include mobile {
+      width: rem(30);
+      height: auto;
+    }
+
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__copyright-container {
+    padding-block: rem(13);
+    font-family: var(--font-family-title);
+    font-weight: 500;
+    background-color: var(--color-dark-15);
+    color: var(--color-light);
+    text-align: center;
+
+    @include mobile {
+      padding-block: rem(8);
+    }
+  }
+
+  &__copyright-text {
+    @include fluid-text(20, 12)
+  }
+}

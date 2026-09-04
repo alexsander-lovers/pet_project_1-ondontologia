@@ -11,10 +11,12 @@
             <svg width="42" height="42" aria-label="hidden">
               <use href="images/icons/sprite/icons.svg#email-icon" />
             </svg>
-            <p class="footer__subtext">Escribinos al Mail</p>
-            <a class="footer__link" href="info@tudentista.com.ar" target="_blank">
-              info@tudentista.com.ar
-            </a>
+            <div class="footer__subtext-wrapper">
+              <p class="footer__subtext">Escribinos al Mail</p>
+              <a class="footer__link" href="info@tudentista.com.ar" target="_blank">
+                info@tudentista.com.ar
+              </a>
+            </div>
           </div>
         </li>
         <li class="footer__item">
@@ -22,10 +24,12 @@
             <svg width="40" height="40" aria-label="hidden">
               <use href="images/icons/sprite/icons.svg#phone-icon_1" />
             </svg>
-            <p class="footer__subtext">Chatea con Nosotros</p>
-            <a class="footer__link" href="tel:+5435176085XX" target="_blank">
-              +54 35176085XX
-            </a>
+            <div class="footer__subtext-wrapper">
+              <p class="footer__subtext">Chatea con Nosotros</p>
+              <a class="footer__link" href="tel:+5435176085XX" target="_blank">
+                +54 35176085XX
+              </a>
+            </div>
           </div>
         </li>
         <li class="footer__item">
@@ -33,10 +37,12 @@
             <svg width="40" height="40" aria-label="hidden">
               <use href="images/icons/sprite/icons.svg#phone-icon_2" />
             </svg>
-            <p class="footer__subtext">Llamanos</p>
-            <a class="footer__link" href="tel:+5435176085XX" target="_blank">
-              0810 888 90XX
-            </a>
+            <div class="footer__subtext-wrapper">
+              <p class="footer__subtext">Llamanos</p>
+              <a class="footer__link" href="tel:+5435176085XX" target="_blank">
+                0810 888 90XX
+              </a>
+            </div>
           </div>
         </li>
         <li class="footer__item">
@@ -44,13 +50,17 @@
             <svg width="43" height="61" aria-label="hidden">
               <use href="images/icons/sprite/icons.svg#addres-icon" />
             </svg>
-            <p class="footer__subtext">Visitanos</p>
-            <address class="footer__text-address-container">
-              <span class="footer__text-address">Av. Color 1338, Barrio Alberdi</span>
-              <span class="footer__text-address">
-                Lunes a Viernes <time datetime="08:00">8</time> a <time datetime="18:00">18</time>
-              </span>
-            </address>
+            <div class="footer__subtext-wrapper">
+              <p class="footer__subtext">Visitanos</p>
+              <address class="footer__text-address-container">
+                <div class="footer__address-container">
+                  <span class="footer__text-address">Av. Color 1338, Barrio Alberdi</span>
+                  <span class="footer__text-address">
+                    Lunes a Viernes <time datetime="08:00">8</time> a <time datetime="18:00">18</time>
+                  </span>
+                </div>
+              </address>
+            </div>
           </div>
         </li>
       </ul>
@@ -77,26 +87,27 @@
           </a>
         </li>
       </ul>
-      <div class="footer__form-container">
-        <form class="footer__form form" action="https://httpbin.org" method="post">
+      <div class="footer__form-container form">
+        <form class="form__field-form" action="https://httpbin.org" method="post">
           <fieldset class="form__fieldset">
             <legend class="form__title">Ponete en contacto para coordinar un turno</legend>
             <ul class="form__list">
               <li class="form__item">
-                <input type="text" name="name" placeholder="Nombre" autocomplete="name" required>
+                <input class="form__field" type="text" name="name" placeholder="Nombre" autocomplete="name" required>
               </li>
               <li class="form__item">
-                <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+                <input class="form__field" type="email" name="email" placeholder="Email" autocomplete="email" required>
               </li>
               <li class="form__item">
-                <input type="tel" name="phone" placeholder="Telefono" autocomplete="tel" required>
+                <input class="form__field" type="tel" name="phone" placeholder="Telefono" autocomplete="tel" required>
               </li>
 
               <li class="form__item">
-                <textarea name="problema" maxlength="500" required style="resize: none;"></textarea>
+                <textarea class="form__field form__field--textarea" name="problema" maxlength="500" rows="3"
+                  placeholder="Problema" required style="resize: none;"></textarea>
               </li>
             </ul>
-            <button class="footer__button button" type="submit">
+            <button class="form__button button" type="submit">
               Enviar
             </button>
           </fieldset>
