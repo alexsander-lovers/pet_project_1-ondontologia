@@ -1,0 +1,53 @@
+@use 'helpers' as *;
+
+.about {
+
+  &__container {
+    padding-block: rem(90);
+
+    @include tablet {
+      padding-block: rem(60);
+    }
+  }
+
+  &__wrapper-contants {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: rem(20);
+
+     @include laptop {
+      flex-direction: column;
+      row-gap: rem(20);
+    }
+  }
+
+  &__inner {
+    align-self: center;
+  }
+
+  &__inner-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+    margin-bottom: rem(40);
+
+    @include tablet {
+      row-gap: rem(20);
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__subtext {
+    @include fluid-text(20, 13);
+
+    color: var(--color-button-bg);
+  }
+
+  &__text {
+    color: var(--color-dark);
+
+    @include laptop {
+      @include fluid-text(20, 13);
+    }
+  }
+}

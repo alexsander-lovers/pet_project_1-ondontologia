@@ -18,15 +18,16 @@
 @use 'blocks/services';
 @use 'blocks/card';
 @use 'blocks/questions';
+@use 'blocks/about';
 
 
 @use 'blocks/footer';
 
-// header,
-// footer,
-// .hero,
-// .social,
-// .services,
-// .questions {
-//   display: none !important;
-// }
+header,
+footer,
+.hero,
+.social,
+.services,
+.questions {
+  display: none !important;
+}
