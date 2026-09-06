@@ -108,5 +108,9 @@
      @include mobile {
       color: var(--color-grey);
     }
+
+    @include hover {
+      color: var(--color-light);
+    }
   }
 }

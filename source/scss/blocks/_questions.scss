@@ -1,0 +1,86 @@
+@use 'helpers' as *;
+
+.questions {
+  &__container {
+    padding: rem(80) rem(220);
+
+    @include tablet {
+      padding: rem(60) rem(20);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(40);
+    margin-bottom: rem(80);
+
+    @include tablet {
+      row-gap: rem(20);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__subtext {
+    @include fluid-text(20, 13);
+
+    color: var(--color-button-bg);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+
+    @include tablet {
+      row-gap: rem(16);
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    color: var(--color-button-text);
+
+    @include tablet {
+      row-gap: rem(5);
+    }
+  }
+
+  &__summary {
+    @include fluid-text(24, 13);
+
+    padding: rem(30) rem(90);
+    font-family: var(--font-family-title);
+    font-weight: 500;
+    list-style: none;
+    background-color: transparent;
+    border: rem(1) solid var(--color-section-bg);
+    border-radius: rem(15) rem(15) 0 0;
+    box-shadow: rem(5) rem(5) 0 0 var(--color-section-bg);
+
+
+     @include tablet {
+      padding: rem(20) rem(20);
+    }
+
+    @include hover {
+      background-color: var(--color-section-bg);
+    }
+  }
+
+  &__text {
+    @include fluid-text(20, 13);
+
+    padding: rem(30) rem(90);
+    border: rem(1) solid var(--color-section-bg);
+    border-radius: 0 0 rem(15) rem(15);
+    box-shadow: rem(5) rem(5) 0 0 var(--color-section-bg);
+
+     @include tablet {
+      padding: rem(20) rem(20);
+    }
+  }
+}

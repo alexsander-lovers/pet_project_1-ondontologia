@@ -46,6 +46,10 @@
     flex-direction: column;
     row-gap: rem(60);
 
+    @include tablet {
+      padding-inline: rem(20);
+    }
+
     @include mobile {
       row-gap: rem(20);
     }
@@ -112,6 +116,10 @@
     justify-content: space-between;
 
     column-gap: rem(70);
+
+    @include tablet {
+      column-gap: rem(10);
+    }
   }
 
   &__button {
