@@ -1,0 +1,45 @@
+@use 'helpers' as *;
+
+.stars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  column-gap: rem(15);
+
+  &__input {
+    position: absolute;
+
+    width: rem(1);
+    height: rem(1);
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  &__label {
+    @include hover{
+      transform: scale(1.1);
+    }
+  }
+
+  &__icon {
+    color: transparent;
+    stroke-width: rem(2)
+  }
+}
+
+.stars__label:hover .stars__icon,
+.stars__label:hover ~ .stars__label .stars__icon {
+  color: var(--color-button-bg);
+}
+
+.stars__input:checked ~ .stars__label .stars__icon {
+  color: var(--color-button-bg);
+}
+
+.stars:hover .stars__input:checked ~ .stars__label .stars__icon {
+  fill: transparent;
+}
+.stars .stars__label:hover .stars__icon,
+.stars .stars__label:hover ~ .stars__label .stars__icon {
+  color: var(--color-button-bg);
+}

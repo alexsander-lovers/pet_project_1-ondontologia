@@ -9,25 +9,6 @@
     }
   }
 
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: rem(40);
-    margin-bottom: rem(80);
-
-    @include tablet {
-      row-gap: rem(20);
-      margin-bottom: rem(40);
-    }
-  }
-
-  &__subtext {
-    @include fluid-text(20, 13);
-
-    color: var(--color-button-bg);
-  }
-
   &__list {
     display: flex;
     flex-direction: column;

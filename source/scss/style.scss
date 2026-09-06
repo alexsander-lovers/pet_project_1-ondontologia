@@ -8,6 +8,12 @@
 @use 'blocks/logo';
 @use 'blocks/burger-menu';
 @use 'blocks/form';
+@use 'blocks/inner';
+@use 'blocks/subtext';
+@use 'blocks/card';
+@use 'blocks/slider__card';
+@use 'blocks/stars';
+
 @use 'blocks/link-top-right-arrow';
 
 @use 'blocks/header';
@@ -16,18 +22,21 @@
 @use 'blocks/hero';
 @use 'blocks/social';
 @use 'blocks/services';
-@use 'blocks/card';
-@use 'blocks/questions';
+@use 'blocks/comments';
 @use 'blocks/about';
-
+@use 'blocks/advantages';
+@use 'blocks/questions';
 
 @use 'blocks/footer';
 
-header,
-footer,
-.hero,
-.social,
-.services,
-.questions {
-  display: none !important;
-}
+// header,
+// footer,
+// .hero,
+// .social,
+// .services,
+// .comments,
+// .about,
+// .advantages,
+// .questions {
+//   display: none !important;
+// }

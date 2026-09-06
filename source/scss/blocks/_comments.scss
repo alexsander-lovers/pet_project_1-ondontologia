@@ -1,0 +1,13 @@
+@use 'helpers' as *;
+
+.comments {
+
+  &__container {
+    padding-block: rem(90);
+
+    @include mobile {
+      padding-block: rem(60);
+    }
+  }
+
+}

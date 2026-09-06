@@ -32,6 +32,10 @@ h3, .h3 {
   @include fluid-text(28, 18);
 }
 
+h4, .h4 {
+  @include fluid-text(24, 20);
+}
+
 a,
 button,
 label,

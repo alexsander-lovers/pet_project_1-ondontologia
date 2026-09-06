@@ -1,0 +1,7 @@
+@use 'helpers' as *;
+
+.subtext {
+  @include fluid-text (20, 13);
+
+    color: var(--color-accent);
+}
