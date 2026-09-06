@@ -1,0 +1,150 @@
+@use 'helpers' as *;
+
+.hero {
+  @include mobile {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: rem(-50);
+      left: rem(40);
+      border-radius: 50%;
+      width: 100%;
+      max-width: 100%;
+      /* Сохраняет пропорции идеального круга */
+      aspect-ratio: 1 / 1;
+      /* Убираем жесткую высоту, чтобы круг не сплющивался */
+      height: auto;
+      background: linear-gradient(to bottom, var(--color-section-bg) 15%, var(--color-button-bg) 45%, var(--color-accent) 70%, var(--color-button-text) 100%);
+      z-index: -1;
+      scale: 1.3;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr minmax(rem(0), rem(893));
+    align-items: center;
+    column-gap: rem(185);
+    padding-block: rem(60);
+
+    @include laptop {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      padding-block: rem(20);
+      border-bottom: rem(1) solid var(--color-button-bg);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(60);
+
+    @include mobile {
+      row-gap: rem(20);
+    }
+  }
+
+  &__container-picture{
+    display: flex;
+    padding-inline: rem(150);
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      @include abs-center;
+
+      content: '';
+      border-radius: 50%;
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 1 / 1;
+      height: auto;
+      background: linear-gradient(to bottom, var(--color-section-bg) 15%, var(--color-button-bg) 45%, var(--color-accent) 70%, var(--color-button-text) 100%);
+      z-index: -1;
+
+       @include mobile {
+        display: none;
+      }
+    }
+
+    @include laptop {
+      order: -1;
+    }
+
+    @include mobile {
+      position: static;
+      padding-inline: rem(50);
+    }
+  }
+
+  &__subtext {
+    @include fluid-text(20, 13);
+
+    font-family: var(--font-family-title);
+    color: var(--color-accent);
+  }
+
+  &__title-another-color {
+    color: var(--color-accent);
+
+    @include mobile {
+      color: var(--color-button-bg);
+    }
+  }
+
+  &__text {
+    @include fluid-text(20, 13);
+
+    font-weight: 300;
+    color: var(--color-dark-15);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    column-gap: rem(70);
+  }
+
+  &__button {
+    color: var(--color-light);
+    background-color: var(--color-button-bg);
+    border-color: inherit;
+    box-shadow: rem(5) rem(5) var(--color-accent);
+  }
+
+  &__link.button {
+    border: none;
+    border-radius: 0;
+    padding-inline: 0;
+    border-bottom: rem(1) solid var(--color-grey);
+    padding-bottom: 0;
+    color: var(--color-grey);
+
+    @include hover {
+      background-color: inherit;
+      color: var(--color-accent);
+      border-bottom: rem(1) solid var(--color-accent);
+    }
+
+    @include tablet {
+      border: rem(1) solid var(--color-grey);
+      border-radius: rem(15);
+      padding-inline: rem(24);
+      padding-bottom: rem(15);
+    }
+  }
+
+  &__image {
+    border-radius: rem(25);
+  }
+}

@@ -1,14 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-@@include('html_companents/head.html', {
-'title': 'Home'
+<html lang="es">
+@@include('html_components/head.html', {
+'title': 'Home |'
 })
 
 <body>
-  @@include('html_companents/header.html')
+  @@include('html_components/header.html')
   <main class="main-page">
+    <section class="hero">
+      <div class="hero__container container">
+
+        <div class="hero__inner">
+          <p class="hero__subtext">En Cordoba Capital</p>
+          <h1 class="hero__title">Una excelente experiencia
+            <span class="hero__title-another-color">Odontológica</span>
+          </h1>
+          <p class="hero__text">Lorem ipsum dolor sit amet consectetur adipiscing elit molestie, rhoncus luctus arcu ut
+            eros augue. Eu commodo laoreet parturient quam purus magna pretium luctus.</p>
+          <div class="hero__wrapper">
+            <button class="hero__button button" type="button">Saca tu turno</button>
+            <a class="hero__link button" href="/">Nuestro Servicios</a>
+          </div>
+        </div>
+
+
+        <div class="hero__container-picture">
+          <div class="hero__wrapper-picture">
+            <picture>
+              <source type="image/avif" media="(max-width: 767px)"
+                srcset="images/hero/hero-mobile.avif 1x, images/hero/hero-mobile@2x.avif 2x" />
+              <source type="image/avif"
+                srcset="images/hero/hero-desktop.avif 1x, images/hero/hero-desktop@2x.avif 2x" />
+
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="images/hero/hero-mobile.webp 1x, images/hero/hero-mobile@2x.webp 2x" />
+              <source type="image/webp"
+                srcset="images/hero/hero-desktop.webp 1x, images/hero/hero-desktop@2x.webp 2x" />
+
+              <source type="image/jpeg" media="(max-width: 767px)"
+                srcset="images/hero/hero-mobile.jpg 1x, images/hero/hero-mobile@2x.jpg 2x" />
+              <img class="hero__image" src="images/hero/hero-desktop.jpg" srcset="images/hero/hero-desktop@2x.jpg 2x"
+                alt="Una excelente experiencia Odontológica" width="595" height="893" loading="eager"
+                fetchpriority="high">
+            </picture>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
-  @@include('html_companents/footer.html')
+  @@include('html_components/footer.html')
   <script src="js/app.min.js"></script>
 </body>
 
