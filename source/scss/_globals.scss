@@ -20,9 +20,11 @@ h6, .h6 {
   color: var(--color-button-text);
 }
 
-h1, .h1,
-h2, .h2 {
+h1, .h1 {
   @include fluid-text(64, 32);
+}
+h2, .h2 {
+  @include fluid-text(32, 20);
 }
 
 h3, .h3 {

@@ -1,0 +1,68 @@
+@use 'helpers' as *;
+
+.services {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/services/services-bg.png) no-repeat;
+    background-position: 100% 50%;
+    z-index: -3;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+
+  &__container {
+    padding-block: rem(120);
+
+    @include mobile {
+      padding-block: rem(60);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+    margin-bottom: rem(80);
+
+    @include mobile {
+      row-gap: rem(20);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__text {
+    @include fluid-text (20, 13);
+
+    color: var(--color-accent);
+  }
+
+}

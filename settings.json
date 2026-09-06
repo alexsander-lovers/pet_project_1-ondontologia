@@ -2,7 +2,9 @@
 "emmet.includeLanguages": {
     "html": "html"
 },
+
 "emmet.triggerExpansionOnTab": true,
 "editor.autoIndent": "full",
-"editor.formatOnType": true
+"editor.formatOnType": true,
+"git.ignoreLimitWarning": true
 }
