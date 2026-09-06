@@ -1,0 +1,112 @@
+@use 'helpers' as *;
+
+.social {
+  background-color: var(--color-section-bg);
+
+  @include mobile {
+    border-bottom: rem(1) solid var(--color-section-bg);
+    background-color: transparent;
+  }
+
+  &__container {
+    padding-block: rem(72);
+    margin-inline: auto;
+
+    @include mobile {
+      padding: rem(60) rem(40);
+      margin-inline: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(50);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    column-gap: rem(20);
+    color: var(--color-button-text);
+
+    @include mobile {
+      justify-content: space-between;
+      align-items: center;
+      column-gap: rem(5);
+    }
+  }
+
+  &__item:first-child &__icon {
+    @include mobile {
+      width: rem(26);
+      height: rem(30);
+    }
+  }
+
+  &__item:nth-child(2) &__icon {
+    @include mobile {
+      width: rem(46);
+      height: rem(30);
+    }
+  }
+
+  &__item:last-child &__icon {
+    @include mobile {
+      width: rem(30);
+      height: rem(30);
+    }
+  }
+
+  &__icon {
+    @include mobile {
+      color: var(--color-button-bg);
+    }
+  }
+
+  &__inner {
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(40);
+
+    @include mobile {
+      min-width: rem(85);
+      margin-bottom: rem(0);
+      color: var(--color-dark-15);
+    }
+  }
+
+  &__inner-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(25);
+
+    @include mobile {
+      min-width: rem(170);
+      color: var(--color-grey);
+    }
+  }
+
+  &__text {
+    @include fluid-text(20, 13);
+  }
+
+  &__link {
+    @include fluid-text(20, 13);
+
+    color: var(--color-button-text);
+
+     @include mobile {
+      color: var(--color-grey);
+    }
+  }
+}

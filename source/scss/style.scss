@@ -14,5 +14,12 @@
 
 @use 'blocks/main-page';
 @use 'blocks/hero';
+@use 'blocks/social';
 
 @use 'blocks/footer';
+
+// header,
+// footer,
+// .hero {
+//   display: none !important;
+// }

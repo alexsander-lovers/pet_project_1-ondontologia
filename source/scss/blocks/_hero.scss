@@ -13,9 +13,7 @@
       border-radius: 50%;
       width: 100%;
       max-width: 100%;
-      /* Сохраняет пропорции идеального круга */
       aspect-ratio: 1 / 1;
-      /* Убираем жесткую высоту, чтобы круг не сплющивался */
       height: auto;
       background: linear-gradient(to bottom, var(--color-section-bg) 15%, var(--color-button-bg) 45%, var(--color-accent) 70%, var(--color-button-text) 100%);
       z-index: -1;
@@ -37,7 +35,8 @@
     }
 
     @include mobile {
-      padding-block: rem(20);
+      padding-top: rem(15);
+      padding-bottom: rem(40);
       border-bottom: rem(1) solid var(--color-button-bg);
     }
   }
