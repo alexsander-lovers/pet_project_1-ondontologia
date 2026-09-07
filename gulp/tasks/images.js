@@ -3,12 +3,9 @@ import avif from 'gulp-avif';
 import imagemin from 'gulp-imagemin';
 
 export const convertToAvif = () => {
-  return app.gulp.src(app.path.source.images, { encoding: false })
+  return app.gulp.src([app.path.source.images, `!${app.path.source.favicons}`], { encoding: false })
     .pipe(app.plugins.plumber(
-      app.plugins.notify.onError({
-        title: 'IMAGES: AVIF',
-        message: 'Error: <%= error.message %>'
-      })
+      app.plugins.notify.onError({ title: 'IMAGES: AVIF', message: 'Error: <%= error.message %>' })
     ))
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.gulp.dest(app.path.build.images))
@@ -18,12 +15,9 @@ export const convertToAvif = () => {
 };
 
 export const convertToWebp = () => {
-  return app.gulp.src(app.path.source.images, { encoding: false })
+  return app.gulp.src([app.path.source.images, `!${app.path.source.favicons}`], { encoding: false })
     .pipe(app.plugins.plumber(
-      app.plugins.notify.onError({
-        title: 'IMAGES: WEBP',
-        message: 'Error: <%= error.message %>'
-      })
+      app.plugins.notify.onError({ title: 'IMAGES: WEBP', message: 'Error: <%= error.message %>' })
     ))
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.gulp.dest(app.path.build.images))
@@ -33,27 +27,19 @@ export const convertToWebp = () => {
 };
 
 export const optimizeRaster = () => {
-  return app.gulp.src(app.path.source.images, { encoding: false })
+  return app.gulp.src([app.path.source.images, `!${app.path.source.favicons}`], { encoding: false })
     .pipe(app.plugins.plumber(
-      app.plugins.notify.onError({
-        title: 'IMAGES: RASTER',
-        message: 'Error: <%= error.message %>'
-      })
+      app.plugins.notify.onError({ title: 'IMAGES: RASTER', message: 'Error: <%= error.message %>' })
     ))
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.gulp.dest(app.path.build.images))
-    .pipe(app.plugins.if(app, imagemin({
-      progressive: true,
-      interlaced: true,
-      optimizationLevel: 3
-    })))
+    .pipe(app.plugins.if(app, imagemin({ progressive: true, interlaced: true, optimizationLevel: 3 })))
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.plugins.browsersync.stream());
 };
 
 export const copySvg = () => {
-  return app.gulp.src(app.path.source.svg)
+  return app.gulp.src([app.path.source.svg, `!${app.path.source.favicons}`])
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.plugins.browsersync.stream());
 };
-

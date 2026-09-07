@@ -14,6 +14,7 @@ export const path = {
     files: `${buildFolder}/files/`,
     manifest: `${buildFolder}/`,
     favicon: `${buildFolder}/`,
+    favicons: `${buildFolder}/images/favicons`,
     video: `${buildFolder}/video/`
   },
   source: {
@@ -26,6 +27,7 @@ export const path = {
     files: `${srcFolder}/files/**/*.*`,
     manifest: `${srcFolder}/*.webmanifest`,
     favicon: `${srcFolder}/*.ico`,
+    favicons: `${srcFolder}/images/favicons/**/*.*`,
     video: `${srcFolder}/video/**/*.mp4`
   },
   watch: {
@@ -36,6 +38,7 @@ export const path = {
     files: `${srcFolder}/files/**/*.*`,
     manifest: `${srcFolder}/**/*.webmanifest`,
     favicon: `${srcFolder}/**/*.ico`,
+    favicons: `${srcFolder}/images/favicons/**/*.*`,
     video: `${srcFolder}/video/**/*.mp4`
   },
   clean: buildFolder,

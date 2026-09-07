@@ -3,7 +3,8 @@ export const copyManifest = () => {
     .pipe(app.gulp.dest(app.path.build.manifest));
 };
 
-export const copyfavicon = () => {
-  return app.gulp.src(app.path.source.favicon)
-    .pipe(app.gulp.dest(app.path.build.favicon));
+export const copyFavicons = () => {
+  return app.gulp.src(`${app.path.source.favicons}`, { encoding: false })
+    .pipe(app.gulp.dest(`${app.path.build.favicons}`))
+    .pipe(app.plugins.browsersync.stream());
 };
