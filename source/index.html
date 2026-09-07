@@ -7,7 +7,6 @@
 <body>
   @@include('html_components/header.html')
   <main class="main-page">
-
     <section class="hero">
       <div class="hero__container container">
         <div class="hero__inner">
@@ -28,19 +27,16 @@
               <source type="image/avif" media="(max-width: 767px)"
                 srcset="images/hero/hero-mobile.avif 1x, images/hero/hero-mobile@2x.avif 2x">
               <source type="image/avif" srcset="images/hero/hero-desktop.avif 1x, images/hero/hero-desktop@2x.avif 2x">
-
               <source type="image/webp" media="(max-width: 767px)"
                 srcset="images/hero/hero-mobile.webp 1x, images/hero/hero-mobile@2x.webp 2x">
               <source type="image/webp" srcset="images/hero/hero-desktop.webp 1x, images/hero/hero-desktop@2x.webp 2x">
-
               <source type="image/jpeg" media="(max-width: 767px)"
                 srcset="images/hero/hero-mobile.jpg 1x, images/hero/hero-mobile@2x.jpg 2x">
-              <img class="hero__image" src="images/hero/hero-desktop.jpg" srcset="images/hero/hero-desktop@2x.jpg 2x"
-                alt="Una excelente experiencia Odontológica" width="595" height="893" loading="eager"
-                fetchpriority="high">
+              <source type="image/jpeg" srcset="images/hero/hero-desktop.jpg 1x, images/hero/hero-desktop@2x.jpg 2x">
+              <img class="hero__image" src="images/hero/hero-desktop.jpg" alt="Una excelente experiencia Odontológica"
+                width="595" height="893" loading="eager" fetchpriority="high">
             </picture>
           </div>
-
         </div>
       </div>
     </section>
@@ -193,180 +189,187 @@
           <p class="comments__subtext subtext">Sobre Mi</p>
           <h2 class="comments__title h1">Lo que opinan nuestros Pacientes</h2>
         </div>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="swiper-slide__container">
-                <div class="swiper-slide__wrapper">
-                  <h3 class="swiper-slide__title h4">Matias Gomez</h3>
-                  <div class="swiper-slide__stars stars">
-                    <input class="stars__input" type="radio" id="star4" name="rating" value="4">
-                    <label for="star4" class="stars__label">
+        <div class="swiper comments-swiper">
+          <div class="swiper-wrapper comments-swiper__wrapper">
+            <div class="swiper-slide comments-swiper__slide">
+              <div class="comments-swiper__container">
+                <div class="comments-swiper__wrapper">
+                  <h3 class="comments-swiper__title h4">Matias Gomez</h3>
+                  <div class="comments-swiper__stars stars">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="4">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star3" name="rating" value="3">
-                    <label for="star3" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="3">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star2" name="rating" value="2">
-                    <label for="star2" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="2">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star1" name="rating" value="1" class="rating-input">
-                    <label for="star1" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="1">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
                   </div>
                 </div>
-                <div class="swiper-slide__inner">
-                  <p class="swiper-slide__text">Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa
+                <div class="comments-swiper__inner">
+                  <p class="comments-swiper__text">Lorem ipsum dolor sit amet consectetur adipiscing
+                    elit conubia, massa
                     facilisi
                     lectus ullamcorper ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula
                     fames.</p>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__container">
-                <div class="swiper-slide__wrapper">
-                  <h3 class="swiper-slide__title h4">Maria Paz</h3>
-                  <div class="swiper-slide__stars stars">
-                    <input class="stars__input" type="radio" id="star3" name="rating" value="3">
-                    <label for="star3" class="stars__label">
+            <div class="swiper-slide comments-swiper__slide">
+              <div class="comments-swiper__container">
+                <div class="comments-swiper__wrapper">
+                  <h3 class="comments-swiper__title h4">Matias Gomez</h3>
+                  <div class="comments-swiper__stars stars">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="3">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star2" name="rating" value="2">
-                    <label for="star2" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="2">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star1" name="rating" value="1" class="rating-input">
-                    <label for="star1" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="1">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
                   </div>
                 </div>
-                <div class="swiper-slide__inner">
-                  <p class="swiper-slide__text">Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa
+                <div class="comments-swiper__inner">
+                  <p class="comments-swiper__text">Lorem ipsum dolor sit amet consectetur adipiscing
+                    elit conubia, massa
                     facilisi
                     lectus ullamcorper ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula
                     fames.</p>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__container">
-                <div class="swiper-slide__wrapper">
-                  <h3 class="swiper-slide__title h4">Silvia Rios</h3>
-                  <div class="swiper-slide__stars stars">
-
-                    <input class="stars__input" type="radio" id="star5" name="rating" value="5">
-                    <label for="star5" class="stars__label">
+            <div class="swiper-slide comments-swiper__slide">
+              <div class="comments-swiper__container">
+                <div class="comments-swiper__wrapper">
+                  <h3 class="comments-swiper__title h4">Matias Gomez</h3>
+                  <div class="comments-swiper__stars stars">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="5">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star4" name="rating" value="4">
-                    <label for="star4" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="4">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star3" name="rating" value="3">
-                    <label for="star3" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="3">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star2" name="rating" value="2">
-                    <label for="star2" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="2">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
-                    <input class="stars__input" type="radio" id="star1" name="rating" value="1" class="rating-input">
-                    <label for="star1" class="stars__label">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="1">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
                   </div>
                 </div>
-                <div class="swiper-slide__inner">
-                  <p class="swiper-slide__text">Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa
+                <div class="comments-swiper__inner">
+                  <p class="comments-swiper__text">Lorem ipsum dolor sit amet consectetur adipiscing
+                    elit conubia, massa
                     facilisi
                     lectus ullamcorper ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula
                     fames.</p>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__container">
-                <div class="swiper-slide__wrapper">
-                  <h3 class="swiper-slide__title h4">Rios Silvia</h3>
-                  <div class="swiper-slide__stars stars">
-                    <input class="stars__input" type="radio" id="star1" name="rating" value="1" class="rating-input">
-                    <label for="star1" class="stars__label">
+            <div class="swiper-slide comments-swiper__slide">
+              <div class="comments-swiper__container">
+                <div class="comments-swiper__wrapper">
+                  <h3 class="comments-swiper__title h4">Matias Gomez</h3>
+                  <div class="comments-swiper__stars stars">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="2">
+                      <svg class="stars__icon" width="27" height="25">
+                        <use href="images/icons/sprite/icons.svg#star" />
+                      </svg>
+                    </label>
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="1">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
                   </div>
                 </div>
-                <div class="swiper-slide__inner">
-                  <p class="swiper-slide__text">Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa
+                <div class="comments-swiper__inner">
+                  <p class="comments-swiper__text">Lorem ipsum dolor sit amet consectetur adipiscing
+                    elit conubia, massa
                     facilisi
                     lectus ullamcorper ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula
                     fames.</p>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__container">
-                <div class="swiper-slide__wrapper">
-                  <h3 class="swiper-slide__title h4">Silvia</h3>
-                  <div class="swiper-slide__stars stars">
-                    <input class="stars__input" type="radio" id="star4" name="rating" value="4">
-                    <label for="star4" class="stars__label">
-                      <svg class="stars__icon" width="27" height="25">
-                        <use href="images/icons/sprite/icons.svg#star" />
-                      </svg>
-                    </label>
-                    <input class="stars__input" type="radio" id="star3" name="rating" value="3">
-                    <label for="star3" class="stars__label">
-                      <svg class="stars__icon" width="27" height="25">
-                        <use href="images/icons/sprite/icons.svg#star" />
-                      </svg>
-                    </label>
-                    <input class="stars__input" type="radio" id="star2" name="rating" value="2">
-                    <label for="star2" class="stars__label">
-                      <svg class="stars__icon" width="27" height="25">
-                        <use href="images/icons/sprite/icons.svg#star" />
-                      </svg>
-                    </label>
-                    <input class="stars__input" type="radio" id="star1" name="rating" value="1" class="rating-input">
-                    <label for="star1" class="stars__label">
+            <div class="swiper-slide comments-swiper__slide">
+              <div class="comments-swiper__container">
+                <div class="comments-swiper__wrapper">
+                  <h3 class="comments-swiper__title h4">Matias Gomez</h3>
+                  <div class="comments-swiper__stars stars">
+                    <label class="stars__label">
+                      <h2 class="visually-hidden">Star</h2>
+                      <input class="stars__input" type="radio" name="rating" value="1">
                       <svg class="stars__icon" width="27" height="25">
                         <use href="images/icons/sprite/icons.svg#star" />
                       </svg>
                     </label>
                   </div>
                 </div>
-                <div class="swiper-slide__inner">
-                  <p class="swiper-slide__text">Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, massa
+                <div class="comments-swiper__inner">
+                  <p class="comments-swiper__text">Lorem ipsum dolor sit amet consectetur adipiscing
+                    elit conubia, massa
                     facilisi
                     lectus ullamcorper ridiculus potenti iaculis nibh, interdum faucibus ad diam vivamus vehicula
                     fames.</p>
@@ -374,7 +377,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination comments-swiper__pagination"></div>
         </div>
         <div class="comments__wrapper-link">
           <a class="comments__link button" href="/">Ver Mas Reviews</a>
@@ -444,7 +447,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <section class="advantages">
@@ -453,23 +455,66 @@
           <p class="advantages__subtext subtext">Las Instalaciones</p>
           <h2 class="advantages__title h1">Nuestra Clinica</h2>
         </div>
-
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 5</div>
+        <div class="swiper swiper-advantages">
+          <div class="swiper-wrapper swiper-advantages__wrapper">
+            <div class="swiper-slide swiper-advantages__slide">
+              <picture>
+                <source type="image/avif" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.avif 1x, images/advantages/advantages-mobile-1@2x.avif 2x">
+                <source type="image/avif"
+                  srcset="images/advantages/advantages-desktop-1.avif 1x, images/advantages/advantages-desktop-1.avif 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.webp 1x, images/advantages/advantages-mobile-1@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="images/advantages/advantages-desktop-1.webp 1x, images/advantages/advantages-desktop-1.webp 2x">
+                <source type="image/jpeg" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.jpg 1x, images/advantages/advantages-mobile-1@2x.jpg 2x">
+                <source type="image/jpeg"
+                  srcset="images/advantages/advantages-desktop-1.jpg 1x, images/advantages/advantages-desktop-1.jpg 2x">
+                <img class="swiper-slide__img swiper-advantages__img" src="images/advantages/advantages-desktop-1.jpg"
+                  alt="" width="1156" height="788" loading="lazy">
+              </picture>
+            </div>
+            <div class="swiper-slide swiper-advantages__slide">
+              <picture>
+                <source type="image/avif" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.avif 1x, images/advantages/advantages-mobile-1@2x.avif 2x">
+                <source type="image/avif"
+                  srcset="images/advantages/advantages-desktop-1.avif 1x, images/advantages/advantages-desktop-1.avif 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.webp 1x, images/advantages/advantages-mobile-1@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="images/advantages/advantages-desktop-1.webp 1x, images/advantages/advantages-desktop-1.webp 2x">
+                <source type="image/jpeg" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.jpg 1x, images/advantages/advantages-mobile-1@2x.jpg 2x">
+                <source type="image/jpeg"
+                  srcset="images/advantages/advantages-desktop-1.jpg 1x, images/advantages/advantages-desktop-1.jpg 2x">
+                <img class="swiper-slide__img swiper-advantages__img" src="images/advantages/advantages-desktop-1.jpg"
+                  alt="" width="1156" height="788" loading="lazy">
+              </picture>
+            </div>
+            <div class="swiper-slide swiper-advantages__slide">
+              <picture>
+                <source type="image/avif" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.avif 1x, images/advantages/advantages-mobile-1@2x.avif 2x">
+                <source type="image/avif"
+                  srcset="images/advantages/advantages-desktop-1.avif 1x, images/advantages/advantages-desktop-1.avif 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.webp 1x, images/advantages/advantages-mobile-1@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="images/advantages/advantages-desktop-1.webp 1x, images/advantages/advantages-desktop-1.webp 2x">
+                <source type="image/jpeg" media="(max-width: 767px)"
+                  srcset="images/advantages/advantages-mobile-1.jpg 1x, images/advantages/advantages-mobile-1@2x.jpg 2x">
+                <source type="image/jpeg"
+                  srcset="images/advantages/advantages-desktop-1.jpg 1x, images/advantages/advantages-desktop-1.jpg 2x">
+                <img class="swiper-slide__img swiper-advantages__img" src="images/advantages/advantages-desktop-1.jpg"
+                  alt="" width="1156" height="788" loading="lazy">
+              </picture>
+            </div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev swiper-advantages__button swiper-advantages__button-prev"></div>
+          <div class="swiper-button-next swiper-advantages__button swiper-advantages__button-next"></div>
         </div>
-
       </div>
     </section>
 
@@ -479,7 +524,6 @@
           <p class="questions__subtext subtext">Sacate las dudas</p>
           <h2 class="questions__title h1">Preguntas Frecuentes</h2>
         </div>
-
         <div class="questions__wrapper">
           <ul class="questions__list">
             <li class="questions__item">
@@ -541,11 +585,10 @@
         </div>
       </div>
     </section>
-
   </main>
   @@include('html_components/footer.html')
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="js/app.min.js"></script>
+  <script src="js/app.min.js" defer></script>
 </body>
 
 </html>

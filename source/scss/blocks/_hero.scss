@@ -121,9 +121,9 @@
   }
 
   &__button {
-    color: var(--color-light);
+    color: var(--color-dark);
     background-color: var(--color-button-bg);
-    border-color: inherit;
+    border-color: transparent;
     box-shadow: rem(5) rem(5) var(--color-accent);
   }
 

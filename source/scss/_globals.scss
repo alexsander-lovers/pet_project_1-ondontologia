@@ -53,9 +53,3 @@ a {
     text-decoration: none;
   }
 }
-
-:focus-visible {
-  outline: rem(2), solid var(--color-dark);
-  outline-offset: rem(4);
-  transition-duration: 0s !important;
-}

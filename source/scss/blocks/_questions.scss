@@ -5,6 +5,10 @@
     padding: rem(80) rem(220);
 
     @include tablet {
+      padding: rem(60) rem(100);
+    }
+
+    @include mobile {
       padding: rem(60) rem(20);
     }
   }
@@ -20,10 +24,16 @@
   }
 
   &__details {
+    position: relative;
     display: flex;
     flex-direction: column;
     row-gap: rem(10);
     color: var(--color-button-text);
+
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
+    }
 
     @include tablet {
       row-gap: rem(5);
@@ -33,6 +43,7 @@
   &__summary {
     @include fluid-text(24, 13);
 
+    position: relative;
     padding: rem(30) rem(90);
     font-family: var(--font-family-title);
     font-weight: 500;
@@ -42,8 +53,35 @@
     border-radius: rem(15) rem(15) 0 0;
     box-shadow: rem(5) rem(5) 0 0 var(--color-section-bg);
 
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: rem(90);
+      width: rem(25);
+      height: rem(25);
+      mask-image: url('../images/icons/bottom-arrow.svg');
+      mask-repeat: no-repeat;
+      mask-position: 50% 50%;
+      mask-size: contain;
+      background-color: var(--color-accent);
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 0.2s ease, background-color 0.2s ease;
 
-     @include tablet {
+      @include mobile {
+        right: rem(20);
+        mask-size: auto;
+        background-color: var(--color-dark);
+      }
+    }
+
+    &--is-active {
+      &::before {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    @include tablet {
       padding: rem(20) rem(20);
     }
 
@@ -60,7 +98,7 @@
     border-radius: 0 0 rem(15) rem(15);
     box-shadow: rem(5) rem(5) 0 0 var(--color-section-bg);
 
-     @include tablet {
+    @include tablet {
       padding: rem(20) rem(20);
     }
   }

@@ -1,20 +1,16 @@
 @use 'helpers' as *;
 
-.swiper {
+.comments-swiper {
   padding: rem(5);
-}
 
-.swiper-wrapper {
-  height: 0;
-  margin-bottom: rem(40);
-}
+  &__wrapper {
+    height: 0;
+    margin-bottom: rem(40);
+  }
 
-.swiper-slide-active {
-  width: 508px;
-}
-
-.swiper-slide {
-  height: auto;
+  &__slide {
+    height: auto;
+  }
 
   &__container {
     display: flex;
@@ -45,21 +41,25 @@
   &__text {
     @include fluid-text(20, 13);
   }
-}
 
-.swiper-pagination {
-  position: static;
-  display: flex;
-  justify-content: center;
-  column-gap: rem(80);
-  margin-bottom: rem(40);
+  &__pagination {
+    position: static;
+    display: flex;
+    justify-content: center;
+    column-gap: rem(80);
+    margin-bottom: rem(40);
 
-  @include mobile {
-    column-gap: rem(15);
+    @include mobile {
+      column-gap: rem(15);
+    }
   }
 }
 
 .swiper-pagination-bullet {
   width: rem(15);
   height: rem(15);
+}
+
+.swiper-slide-active {
+  width: 508px;
 }

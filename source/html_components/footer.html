@@ -116,14 +116,26 @@
     </div>
   </div>
   <div class="footer__map-container">
-    <img class="footer__img" src="images/map.jpg" alt="map" width="1730" height="575"
-      style="display: none; width: 100%;" loading="lazy">
+    <picture class="footer__picture">
+      <source type="image/avif" media="(max-width: 767px)"
+        srcset="images/map/map-mobile.avif 1x, images/map/map-mobile@2x.avif 2x">
+      <source type="image/avif" srcset="images/map/map-desktop.avif 1x, images/map/map-desktop@2x.avif 2x">
+      <source type="image/webp" media="(max-width: 767px)"
+        srcset="images/map/map-mobile.webp 1x, images/map/map-mobile@2x.webp 2x">
+      <source type="image/webp" srcset="images/map/map-desktop.webp 1x, images/map/map-desktop@2x.webp 2x">
+      <source type="image/jpeg" media="(max-width: 767px)"
+        srcset="images/map/map-mobile.jpg 1x, images/map/map-mobile@2x.jpg 2x">
+      <source type="image/jpeg" srcset="images/map/map-desktop.jpg 1x, images/map/map-desktop@2x.jpg 2x">
+      <img class="footer__img" src="images/map/map-desktop.jpg" alt="map" width="1730" height="575" style="width: 100%;"
+        loading="lazy">
+    </picture>
     <iframe class="footer__iframe"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7155556475473!2d2.118333576246614!3d41.380264271300774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f43e3a7af1%3A0x6bfd5dfe4d49e72f!2sFC%20Barcelona%20Museum!5e0!3m2!1sen!2sru!4v1788513512967!5m2!1sen!2sru"
-      width="600" height="450" style="display: block; border:0; width: 100%;" allowfullscreen="" loading="lazy"
-      referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7694731996708!2d2.117436976246537!3d41.37909297130099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f67ddc56e3%3A0x97271e36f048e440!2sCarrer%20d'Ar%C3%ADstides%20Maillol%2C%20Les%20Corts%2C%2008028%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sru!4v1788790823586!5m2!1sen!2sru"
+      width="1730" height="575" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin" title="map"> </iframe>
   </div>
+
+
   <div class="footer__copyright-container">
     <p class="footer__copyright-text">Diseñado por Uncoder.com.ar</p>
   </div>

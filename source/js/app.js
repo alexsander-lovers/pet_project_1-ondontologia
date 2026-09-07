@@ -50,3 +50,56 @@ const swiperAdvantages = new Swiper('.advantages .swiper', {
   },
 })
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const summaries = document.querySelectorAll('.questions__summary');
+
+    summaries.forEach((summary) => {
+        summary.addEventListener('click', (event) => {
+
+            event.preventDefault();
+
+            summary.classList.toggle('questions__summary--is-active');
+
+            const details = summary.closest('.questions__details');
+
+            if (details) {
+
+                if (details.hasAttribute('open')) {
+                    details.removeAttribute('open');
+                } else {
+                    details.setAttribute('open', '');
+                }
+            }
+        });
+    });
+});
+
+
+(() => {
+  const checkIframe = () => {
+    const iframe = document.querySelector(".footer__iframe");
+    const picture = document.querySelector(".footer__picture");
+
+    if (!iframe || !picture) return;
+
+    function showMap() {
+      iframe.classList.add("is-loaded");
+      picture.classList.add("is-hidden");
+    }
+
+    try {
+      if (iframe.contentDocument && iframe.contentDocument.readyState === "complete") {
+        showMap();
+        return;
+      }
+    } catch (e) {
+    }
+    iframe.addEventListener("load", showMap);
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", checkIframe);
+  } else {
+    checkIframe();
+  }
+})();

@@ -3,5 +3,5 @@
 .subtext {
   @include fluid-text (20, 13);
 
-    color: var(--color-accent);
+    color: var(var(--color-dark-15));
 }

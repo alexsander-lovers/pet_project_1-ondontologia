@@ -1,0 +1,26 @@
+@use 'helpers' as *;
+
+.swiper-advantages {
+
+  &__wrapper {
+    margin-bottom: rem(0);
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__button {
+    width: rem(18);
+    color: var(--color-dark-15);
+    opacity: 0.1;
+  }
+}
+
+.swiper-button-prev.swiper-advantages__button-prev {
+  margin-left: 20px;
+}
+
+.swiper-button-next.swiper-advantages__button-next {
+  margin-right: 20px;
+}

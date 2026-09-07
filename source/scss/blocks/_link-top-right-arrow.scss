@@ -19,11 +19,8 @@
   }
 
   @include hover {
-       &::after {
-        background-color: var(--color-gradient-100);
-       }
+    &::after {
+      background-color: var(--color-gradient-100);
     }
-
-
-
+  }
 }

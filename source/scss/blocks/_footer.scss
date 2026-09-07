@@ -132,6 +132,22 @@
     }
   }
 
+    &__picture {
+    display: block;
+
+    &.is-hidden {
+      display: none !important;
+    }
+  }
+
+  &__iframe {
+    display: none !important;
+
+    &.is-loaded {
+      display: block !important;
+    }
+  }
+
   &__copyright-container {
     padding-block: rem(13);
     font-family: var(--font-family-title);
