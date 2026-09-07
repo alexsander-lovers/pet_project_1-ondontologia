@@ -10,4 +10,18 @@
     }
   }
 
+  &__inner {
+    align-items: center;
+  }
+
+  &__wrapper-link {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    border-color: var(--color-button-bg);
+    color: var(--color-button-bg);
+  }
+
 }

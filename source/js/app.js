@@ -6,3 +6,47 @@ burgerButton.addEventListener('click', () => {
   burgerButton.classList.toggle('burger-menu--is-active');
   headerMobileContiner.classList.toggle('header__mobile-continer--is-active')
 });
+
+const swiperComments = new Swiper('.comments .swiper', {
+  spaceBetween: 20,
+  slidesPerView: 1,
+  loop: true,
+  autoHeight: true,
+  speed: 1000,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  breakpoints: {
+    935: {
+      slidesPerView: 2,
+    },
+    1400: {
+      slidesPerView: 3,
+    },
+  },
+})
+
+const swiperAdvantages = new Swiper('.advantages .swiper', {
+  spaceBetween: 20,
+  slidesPerView: 1,
+  loop: true,
+  autoHeight: true,
+  speed: 1000,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
+
