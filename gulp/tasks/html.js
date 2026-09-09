@@ -1,7 +1,6 @@
 import fileInclude from 'gulp-file-include';
 import versionNumber from 'gulp-version-number';
 import htmlMin from 'gulp-htmlmin';
-import rename from 'gulp-rename';
 
 export const html = () => {
   return app.gulp.src(app.path.source.html)
@@ -26,9 +25,6 @@ export const html = () => {
     .pipe(app.plugins.if(app.isBuild, htmlMin({
       collapseWhitespace: true,
       removeComments: true
-    })))
-    .pipe(app.plugins.if(app.isBuild, rename({
-      extname: '.min.html'
     })))
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browsersync.stream());

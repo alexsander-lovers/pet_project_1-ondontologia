@@ -1,7 +1,7 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./${rootFolder}`;
+const buildFolder = `./build`;
 const srcFolder = `./source`
 
 export const path = {

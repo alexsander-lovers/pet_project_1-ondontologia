@@ -9,7 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "deployGit": "gh-pages -d pet_project_1-ondontologia"
+    "deployGit": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
