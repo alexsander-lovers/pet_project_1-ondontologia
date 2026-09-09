@@ -1,4 +1,4 @@
-# gulp__project-template
+# pet_project_1-ondontologia
 
 <!-- npm init - команда для создания package.json-->
 <!-- npm i gulp-cli -g - устанавливает gulp глобально (нужно один раз на копьютере сделать для macOS в начале добавить subo)-->
